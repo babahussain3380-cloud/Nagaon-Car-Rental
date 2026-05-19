@@ -8,6 +8,39 @@
 <img src="https://postimg.cc/Q9sqNKcS" width="300">
 <h2>Maruti Swift VXI 2016</h2>
 <p>Affordable Car Rental With Driver in Nagaon, Assam</p>
-<a href="https://wa.me/919707555891">Book on WhatsApp</a>
+<h3>Booking Request</h3>
+
+<input type="text" id="name" placeholder="Your Name"><br><br>
+
+<input type="tel" id="phone" placeholder="Phone Number"><br><br>
+
+<input type="text" id="pickup" placeholder="Pickup Location"><br><br>
+
+<input type="text" id="drop" placeholder="Drop Location"><br><br>
+
+<input type="date" id="date"><br><br>
+
+<button onclick="sendWhatsApp()">Send Booking on WhatsApp</button>
+
+<script>
+function sendWhatsApp() {
+
+let name = document.getElementById('name').value;
+let phone = document.getElementById('phone').value;
+let pickup = document.getElementById('pickup').value;
+let drop = document.getElementById('drop').value;
+let date = document.getElementById('date').value;
+
+let message =
+`Booking Request:%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Pickup: ${pickup}%0A
+Drop: ${drop}%0A
+Date: ${date}`;
+<p>Customer must send Aadhaar/ID proof on WhatsApp after booking request.</p>
+window.open(`https://wa.me/9707555891?text=${message}`);
+}
+</script>
 </body>
 </html>
