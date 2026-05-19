@@ -20,9 +20,15 @@
 
 <input type="date" id="date"><br><br>
 
-<button onclick="sendWhatsApp()">Send Booking on WhatsApp</button>
+label>Upload Aadhaar / Driving License</label><br><br>
 
-<script>
+<input type="file" id="idproof"><br><br>
+
+<p>Customer must send Aadhaar/ID proof on WhatsApp after booking request.</p>
+
+  <button onclick="sendWhatsApp()">Send Booking on WhatsApp</button>
+
+  <script>
 function sendWhatsApp() {
 
 let name = document.getElementById('name').value;
