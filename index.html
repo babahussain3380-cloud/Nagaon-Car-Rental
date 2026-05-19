@@ -41,7 +41,7 @@ function sendWhatsApp() {
 let name = document.getElementById('name').value;
 let phone = document.getElementById('phone').value;
 let pickup = document.getElementById('pickup').value;
-let drop = document.getElementById('Trip Type: ${triptype}%0A').value;
+let drop = document.getElementById('drop').value;
 let triptype = document.getElementById('triptype').value;
 let date = document.getElementById('date').value;
 
@@ -50,7 +50,7 @@ let message =
 Name: ${name}%0A
 Phone: ${phone}%0A
 Pickup: ${pickup}%0A
-Drop: ${drop}%0A
+Drop: ${triptype}%0A
 Date: ${date}`;
 window.open(`https://wa.me/919707555891?text=${message}`);
 }
