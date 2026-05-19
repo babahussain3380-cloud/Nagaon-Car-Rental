@@ -18,6 +18,13 @@
 
 <input type="text" id="drop" placeholder="Drop Location"><br><br>
 
+<label>Trip Type</label><br><br>
+
+<select id="triptype">
+  <option>Single Trip</option>
+  <option>Round Trip</option>
+</select><br><br>
+  
 <input type="date" id="date"><br><br>
 
 label>Upload Aadhaar / Driving License</label><br><br>
@@ -34,7 +41,8 @@ function sendWhatsApp() {
 let name = document.getElementById('name').value;
 let phone = document.getElementById('phone').value;
 let pickup = document.getElementById('pickup').value;
-let drop = document.getElementById('drop').value;
+let drop = document.getElementById('Trip Type: ${triptype}%0A').value;
+let triptype = document.getElementById('triptype').value;
 let date = document.getElementById('date').value;
 
 let message =
