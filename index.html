@@ -1,67 +1,139 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="google-site-verification" content="Vf2MKZ1ShUolLktx2OFNE7ILQZZjjQ-tAw8TPSZRaI0" />
+
+<title>Nagaon Car Rental Service</title>
+
 <meta name="description" content="Affordable Car Rental With Driver in Nagaon, Assam">
-<title>Wasim Travels</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f4f4f4;
+padding:20px;
+text-align:center;
+}
+
+.box{
+background:white;
+padding:20px;
+border-radius:15px;
+max-width:500px;
+margin:auto;
+}
+
+img{
+width:100%;
+border-radius:15px;
+}
+
+input, select, button{
+width:90%;
+padding:12px;
+margin:8px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+background:black;
+color:white;
+font-size:16px;
+}
+
+</style>
+
 </head>
-<body style="font-family:Arial;text-align:center;padding:40px;">
-<h1>Wasim Travels</h1>
-<img src="https://postimg.cc/Q9sqNKcS" width="300">
+
+<body>
+
+<div class="box">
+
+<h1>Nagaon Car Rental Service</h1>
+
 <h2>Maruti Swift VXI 2016</h2>
-<p>Affordable Car Rental With Driver in Nagaon, Assam</p>
-<h3>Booking Request</h3>
 
-<input type="text" id="name" placeholder="Your Name"><br><br>
+<p>Pickup & Drop Service Available</p>
 
-<input type="tel" id="phone" placeholder="Phone Number"><br><br>
+<p>Single Trip & Round Trip</p>
 
-<input type="text" id="pickup" placeholder="Pickup Location"><br><br>
+<p>Customer must send ID proof on WhatsApp after booking.</p>
 
-<input type="text" id="drop" placeholder="Drop Location"><br><br>
+<h2>Booking Form</h2>
 
-<label>Trip Type</label><br><br>
+<input type="text" id="name" placeholder="Your Name">
+
+<input type="tel" id="phone" placeholder="Phone Number">
+
+<input type="text" id="pickup" placeholder="Pickup Location">
+
+<input type="text" id="drop" placeholder="Drop Location">
+
+<label>Trip Type</label>
 
 <select id="triptype">
-  <option>Single Trip</option>
-  <option>Round Trip</option>
-</select><br><br>
-  
-<input type="date" id="date"><br><br>
+<option>Single Trip</option>
+<option>Round Trip</option>
+</select>
 
-<label>Return Date</label><br><br>
+<label>Trip Date</label>
 
-<input type="date" id="returndate"><br><br>
+<input type="date" id="date">
 
->Upload Aadhaar / pan card</label><br><br>
+<label>Return Date</label>
 
-<input type="file" id="idproof"><br><br>
+<input type="date" id="returndate">
 
-<p>Customer must send Aadhaar/ID proof on WhatsApp after booking request.</p>
+<button onclick="sendWhatsApp()">
+Send Booking on WhatsApp
+</button>
 
-  <button onclick="sendWhatsApp()">Send Booking on WhatsApp</button>
+</div>
 
-  <script>
+<script>
+
 function sendWhatsApp() {
 
 let name = document.getElementById('name').value;
+
 let phone = document.getElementById('phone').value;
+
 let pickup = document.getElementById('pickup').value;
+
 let drop = document.getElementById('drop').value;
+
 let triptype = document.getElementById('triptype').value;
+
 let date = document.getElementById('date').value;
+
 let returndate = document.getElementById('returndate').value;
 
 let message =
-`Booking Request:%0A
-Name: ${name}%0A
-Phone: ${phone}%0A
-Pickup: ${pickup}%0A
-Drop: ${triptype}%0A
-Date: ${date}`;%0A
-Return Date: ${returndate}%0A
- window.open(`https://wa.me/919707555891?text=${message}`);
+"Booking Request:%0A%0A" +
+
+"Name: " + name + "%0A" +
+
+"Phone: " + phone + "%0A" +
+
+"Pickup: " + pickup + "%0A" +
+
+"Drop: " + drop + "%0A" +
+
+"Trip Type: " + triptype + "%0A" +
+
+"Trip Date: " + date + "%0A" +
+
+"Return Date: " + returndate;
+
+window.open(
+"https://wa.me/91YOURNUMBER?text=" + message,
+"_blank"
+);
+
 }
+
 </script>
+
 </body>
 </html>
