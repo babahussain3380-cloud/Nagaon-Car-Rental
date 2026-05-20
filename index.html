@@ -29,6 +29,10 @@
   
 <input type="date" id="date"><br><br>
 
+<label>Return Date</label><br><br>
+
+<input type="date" id="returndate"><br><br>
+
 >Upload Aadhaar / pan card</label><br><br>
 
 <input type="file" id="idproof"><br><br>
@@ -46,6 +50,7 @@ let pickup = document.getElementById('pickup').value;
 let drop = document.getElementById('drop').value;
 let triptype = document.getElementById('triptype').value;
 let date = document.getElementById('date').value;
+let returndate = document.getElementById('returndate').value;
 
 let message =
 `Booking Request:%0A
@@ -53,7 +58,8 @@ Name: ${name}%0A
 Phone: ${phone}%0A
 Pickup: ${pickup}%0A
 Drop: ${triptype}%0A
-Date: ${date}`;
+Date: ${date}`;%0A
+Return Date: ${returndate}%0A
 window.open(`https://wa.me/919707555891?text=${message}`);
 }
 </script>
